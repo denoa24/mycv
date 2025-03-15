@@ -1,0 +1,28 @@
+/*!   
+ * Template Name: Developer - Portfolio/CV/Resume
+ * Version: Bootstrap 5.3.3 +Webpack 5.90.3 
+ * Author: Adrian Adiaconitei for LinkAcademy
+*/
+
+// Import all of Bootstrap's CSS
+@use "~bootstrap/scss/bootstrap";
+
+@use "~bootstrap-icons/font/bootstrap-icons.scss";
+@use "general";
+@use "base";
+@use "header";
+@use "banner";
+@use "social";
+@use "footer";
+
+// @import "dark-mode";
+// @import "responsive";
+
+@use "tot";
+$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts";
+/*
+|----------------------------------------------------------------------------
+	1. FONTS: Google Font
+|----------------------------------------------------------------------------
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Open+Sans:400,400i,600,600i,700,700i");

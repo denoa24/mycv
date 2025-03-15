@@ -1,0 +1,34 @@
+Pas 1.
+mkdir cvtemplate && cd cvtemplate
+
+Pas 2. 
+npm init -y
+
+Pas 3. 
+npm install vite @vitejs/plugin-legacy vite-plugin-html vite-plugin-copy vite-plugin-sass-dts
+Pas 4. 
+npm i  bootstrap bootstrap-icons jquery @popperjs/core --save
+
+Pas 5. 
+npm install -D sass postcss autoprefixer
+
+
+Pas 6.
+mkdir {dist,src,src/js,src/scss,src/images,src/views}
+
+Pas 7. 
+touch src/index.html src/index.js src/js/main.js src/scss/styles.scss webpack.config.js
+Daca avem git-ul configurat:
+touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules ;
+
+Pas 8. 
+Editam vite.config.js https://vite.dev/config/
+https://gist.github.com/mistical2008/47915b72f5ae1abfdd8338e754424b20
+
+Pas 9. 
+in package.json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "serve": "vite preview"
+}

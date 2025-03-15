@@ -1,0 +1,92 @@
+Pas 1.
+mkdir cvtemplate && cd cvtemplate
+
+Pas 2. 
+npm init -y
+
+Pas 3. 
+npm i webpack  webpack-cli html-webpack-plugin --save-dev
+
+Pas 4. 
+npm i copy-webpack-plugin mini-css-extract-plugin autoprefixer css-loader 
+npm i postcss-loader sass sass-loader style-loader --save-dev
+npm i babel-loader
+Pas 5. 
+npm i  bootstrap bootstrap-icons jquery @popperjs/core --save
+
+Pas 6.
+mkdir {dist,src,src/js,src/scss,src/images,src/views}
+
+Pas 7. 
+touch src/index.html src/index.js src/js/main.js src/scss/styles.scss webpack.config.js
+
+Daca avem git-ul configurat:
+touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules ;
+
+Pas 8. 
+Editam webpack.config.js https://webpack.js.org/concepts/configuration/
+
+Pas 9. package.json
+ "scripts": {
+    "dev": "webpack build --mode=development",
+    "build": "webpack build --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+
+Pas 10. src/scss/styles.scss
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+Pas 11. src/index.js
+// Import our custom CSS
+import './scss/styles.scss'
+
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
+
+Pas 12. src/index.html 
+Facem Template HTML 
+Adaugam header, banner si footer
+touch views/header.html views/footer.html views/banner.html
+
+Pas 13. 
+Instalam animatia pe banner
+https://vincentgarreau.com/particles.js/
+sau
+https://github.com/tsparticles/tsparticles
+https://particles.js.org
+https://confetti.js.org
+
+npm install particles.js --save
+
+Facem fisierul de configurare
+touch src/js/particles.js
+
+adaugam in index.js 
+import particles from 'particles.js'
+import './js/particles.js'
+
+import './js/main.js'
+
+adaugam in template :index.html
+ <div id="particles-js"></div>
+
+ Apoi adaugam css pentru acest id
+
+
+ Pas 14.
+ https://github.com/mattboldt/typed.js/?tab=readme-ov-file
+ npm install typed.js --save
+ adaugam in index.js 
+ import '../node_modules/typed.js/dist/typed.umd.js'
+
+Daca avem eroari si doril sa vedem doar erorile  cand rulam:
+npm run build 2>&1 | grep -i "error"
+
+
+ Opentru a vedea ce module/pachete folosim si ce versiuni:
+  npm list 
+
+
+
+
